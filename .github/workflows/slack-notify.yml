@@ -1,0 +1,11 @@
+name: Notify slack
+on: 
+  pull_request: 
+    branches: [ main ]
+env:
+  SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+jobs: 
+  runs-on: ubuntu-latest
+  uses: pullreminders/slack-action@master
+  with:
+    args: '{"channel":"C01E1CEFPBK","text":"Hey, A new pull request"}'
