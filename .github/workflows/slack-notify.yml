@@ -5,7 +5,12 @@ on:
 env:
   SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
 jobs: 
-  runs-on: ubuntu-latest
-  uses: pullreminders/slack-action@master
-  with:
-    args: '{"channel":"C01E1CEFPBK","text":"Hey, A new pull request"}'
+  slack-notifer:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name:  send-message-to-slack
+      
+      uses: pullreminders/slack-action@master
+      with:
+        args: '{"channel":"C01E1CEFPBK","text":"Hey, A new pull request"}'
