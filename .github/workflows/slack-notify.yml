@@ -13,4 +13,4 @@ jobs:
       
       uses: pullreminders/slack-action@master
       with:
-        args: '{\"channel\":\"C1234567890\",\"text\":\"There was a new pull request created on main branch just now\"}'
+        args: '{\"channel\":\"D01JUAQLVJR\",\"text\":\"There was a new pull request created on main branch just now\"}'
