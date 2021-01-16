@@ -2,8 +2,9 @@
 name: Build and Deploy to Netlify
 on: 
   push:
-    branches:
-      - new-feature
+    branches: [ $default-branch ]
+  pull_request: 
+    branches: [ $default-branch ]
 jobs:
   build:
     runs-on: ubuntu-18.04
