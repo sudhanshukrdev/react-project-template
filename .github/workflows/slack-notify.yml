@@ -13,4 +13,4 @@ jobs:
       
       uses: pullreminders/slack-action@master
       with:
-        args: '{"channel":"C01E1CEFPBK","text":"Hey, A new pull request"}'
+        args: '{\"channel\":\"D01JUAQLVJR\",\"text\":\"Hello world\"}'
