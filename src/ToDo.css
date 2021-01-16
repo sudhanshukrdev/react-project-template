@@ -53,7 +53,7 @@ body {
 
 .ToDo-Add:hover {
   box-shadow: none;
-  margin-left: calc(auto + 1px);
+  /* margin-left: calc(auto + 1px); */
 }
 
 .ToDo-Container {
