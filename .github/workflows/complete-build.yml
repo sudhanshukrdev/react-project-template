@@ -1,4 +1,4 @@
-name: learn-github-actions
+name: complete-build
 on: [push]
 jobs:
   run-the-project:
