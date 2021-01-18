@@ -5,8 +5,8 @@ on:
   pull_request: 
     branches: [ main ]
 jobs:
-  slack-notification:
-    name: ${{ github.event.head_commit.message }}
+  slackNotification:
+    name: slack-notification
     runs-on: ubuntu-latest
     steps:
     - uses: rtCamp/action-slack-notify@v2
@@ -15,5 +15,5 @@ jobs:
         SLACK_USERNAME : ${{ secrets.SLACK_USERNAME }}
         SLACK_ICON : https://mwblive-0obrejwqde.netdna-ssl.com/wp-content/uploads/2018/12/mwb-logo.png
         SLACK_COLOR: '#643eff'
-        SLACK_MESSAGE: 'Post Content :rocket:'
+        SLACK_MESSAGE: ${{ github.event.head_commit.message }}
 
