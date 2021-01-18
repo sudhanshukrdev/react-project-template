@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: rtCamp/action-slack-notify@v2
+      run: echo  ${{ COMMIT_MESSAGE }}
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         SLACK_USERNAME : ${{ secrets.SLACK_USERNAME }}
