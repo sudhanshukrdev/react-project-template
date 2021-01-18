@@ -5,8 +5,8 @@ on:
   pull_request: 
     branches: [ main ]
 jobs:
-  slackNotification:
-    name: slack-notification
+  slack-notification:
+    name: ${{ github.event.head_commit.message }}
     runs-on: ubuntu-latest
     steps:
     - uses: rtCamp/action-slack-notify@v2
