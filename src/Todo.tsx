@@ -1,20 +1,20 @@
 import React, { FunctionComponent, useState, ChangeEvent } from 'react';
-import './Todo.css';
-import ToDoItem from './components/ToDoItem';
+import classes from './Todo.module.css';
+import TodoItem from './components/TodoItem';
 import Logo from './assets/logo.png';
 
 const Todo: FunctionComponent = () => {
   const [state, setState] = useState<Array<string>>([]);
   const [todo, setTodo] = useState<string>('');
 
-  const createNewToDoItem = () => {
+  const createNewTodoItem = () => {
     setState(prev => [...prev, todo]);
     setTodo('');
   };
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      createNewToDoItem();
+      createNewTodoItem();
     }
   };
 
@@ -27,14 +27,14 @@ const Todo: FunctionComponent = () => {
   };
 
   return (
-    <div className="ToDo">
-      <img className="Logo" src={Logo} alt="React logo" />
-      <h1 className="ToDo-Header">React To Do</h1>
-      <div className="ToDo-Container">
-        <div className="ToDo-Content">
+    <div className={classes.Todo}>
+      <img className={classes.Logo} src={Logo} alt="React logo" />
+      <h1 className={classes['Todo-Header']}>React To Do</h1>
+      <div className={classes['Todo-Container']}>
+        <div className={classes['Todo-Content']}>
           {state.map((item, key) => {
             return (
-              <ToDoItem
+              <TodoItem
                 // eslint-disable-next-line react/no-array-index-key
                 key={key}
                 item={item}
@@ -52,9 +52,9 @@ const Todo: FunctionComponent = () => {
             onKeyPress={handleKeyPress}
           />
           <button
-            className="ToDo-Add"
+            className={classes['Todo-Add']}
             type="button"
-            onClick={createNewToDoItem}
+            onClick={createNewTodoItem}
           >
             +
           </button>

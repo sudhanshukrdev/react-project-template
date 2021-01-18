@@ -1,18 +1,18 @@
 import React, { FunctionComponent } from 'react';
-import './ToDoItem.css';
+import classes from './TodoItem.module.css';
 
-const ToDoItem: FunctionComponent<{
+const TodoItem: FunctionComponent<{
   deleteItem: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   item: string;
 }> = props => {
   const { deleteItem, item } = props;
 
   return (
-    <div className="ToDoItem">
-      {/* <p className="ToDoItem-Text">{props.item}</p> */}
-      <p className="ToDoItem-Text">{item}</p>
+    <div className={classes.TodoItem}>
+      {/* <p className={classes['TodoItem-Text']}>{props.item}</p> */}
+      <p className={classes['TodoItem-Text']}>{item}</p>
       <button
-        className="ToDoItem-Delete"
+        className={classes['TodoItem-Delete']}
         type="button"
         // onClick={props.deleteItem}
         onClick={deleteItem}
@@ -23,4 +23,4 @@ const ToDoItem: FunctionComponent<{
   );
 };
 
-export default ToDoItem;
+export default TodoItem;
