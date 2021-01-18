@@ -2,7 +2,7 @@ name: test-production-build
 on: [push]
 jobs:
   run-the-project:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
