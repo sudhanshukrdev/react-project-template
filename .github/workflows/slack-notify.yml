@@ -1,16 +1,16 @@
-name: Notify slack
+name: Slack Notification
 on: 
+  push:
+    branches: [ main ]
   pull_request: 
     branches: [ main ]
-env:
-  SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-jobs: 
-  slack-notifer:
+jobs:
+  slackNotification:
+    name: Slack Notification
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name:  send-message-to-slack
-      
-      uses: pullreminders/slack-action@master
-      with:
-        args: '{\"channel\":\"D01JUAQLVJR\",\"text\":\"There was a new pull request created on main branch just now\"}'
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
