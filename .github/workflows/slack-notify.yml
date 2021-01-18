@@ -9,13 +9,11 @@ jobs:
     name: slack-notification
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: slack-notification
-      uses: rtCamp/action-slack-notify@v2
+    - uses: rtCamp/action-slack-notify@v2
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         SLACK_USERNAME : ${{ secrets.SLACK_USERNAME }}
-        SLACK_MSG_AUTHOR: $GITHUB_ACTOR
         SLACK_ICON : https://mwblive-0obrejwqde.netdna-ssl.com/wp-content/uploads/2018/12/mwb-logo.png
         SLACK_COLOR: '#643eff'
-        
+        SLACK_MESSAGE: 'Post Content :rocket:'
+
