@@ -56,7 +56,7 @@ const Todo: FunctionComponent = () => {
             type="button"
             onClick={createNewTodoItem}
           >
-            ++
+            +
           </button>
         </div>
       </div>
