@@ -1,4 +1,4 @@
-name: slack-notification
+name: Slack Notification
 on: 
   push:
     branches: [ main ]

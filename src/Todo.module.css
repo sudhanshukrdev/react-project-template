@@ -16,7 +16,7 @@ body {
   top: 50px;
 }
 
-.ToDo {
+.Todo {
   text-align: center;
   border: 1px solid white;
   width: 80vw;
@@ -27,7 +27,7 @@ body {
   margin: 40px auto;
 }
 
-.ToDo-Header {
+.Todo-Header {
   color: black;
   font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -35,7 +35,7 @@ body {
   margin: 70px auto 30px;
 }
 
-.ToDo-Add {
+.Todo-Add {
   color: white;
   font-size: 2em;
   width: 40px;
@@ -51,12 +51,12 @@ body {
   margin: 20px auto 0;
 }
 
-.ToDo-Add:hover {
+.Todo-Add:hover {
   box-shadow: none;
   /* margin-left: calc(auto + 1px); */
 }
 
-.ToDo-Container {
+.Todo-Container {
   width: 80%;
   margin: 0 auto;
 }
