@@ -1,4 +1,4 @@
-name: test-production-build
+name: Test Production Build
 on: [push]
 jobs:
   run-the-project:
