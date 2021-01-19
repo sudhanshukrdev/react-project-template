@@ -12,7 +12,7 @@ const TodoItem: FunctionComponent<{
       {/* <p className={classes['TodoItem-Text']}>{props.item}</p> */}
       <p className={classes['TodoItem-Text']}>{item}</p>
       <button
-        className={classes['TodoItem-Delete']}
+        className={`${classes['TodoItem-Delete']} test`}
         type="button"
         // onClick={props.deleteItem}
         onClick={deleteItem}
