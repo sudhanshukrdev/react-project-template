@@ -33,7 +33,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "jquery": "^3.5",
     "laravel-mix": "^5.0.9",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "popper.js": "^1.12",
     "prettier": "2.2.1",
     "prettier-eslint": "^12.0.0",
