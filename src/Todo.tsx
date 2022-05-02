@@ -27,7 +27,7 @@ const Todo: FunctionComponent = () => {
   };
 
   return (
-    <div className={classes.Todo}>
+    <div >
       <img className={classes.Logo} src={Logo} alt="React logo" />
       <h1 className={classes['Todo-Header']}>React To Do</h1>
       <div className={classes['Todo-Container']}>
