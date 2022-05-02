@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  CI: false
+
 jobs:
   deploy:
     name: Deploy to EC2 on main branch push
@@ -16,7 +19,7 @@ jobs:
         with:
           cache: 'npm'
           node-version: 17
-      - run: npm ci && npm run build
+      - run: npm ci --force && npm run build
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
         env:
