@@ -19,7 +19,7 @@ jobs:
         with:
           cache: 'npm'
           node-version: 17
-      - run: npm ci --force && npm run build
+      - run: npm ci && npm run build
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
         env:
